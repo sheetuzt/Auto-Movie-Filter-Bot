@@ -1,17 +1,27 @@
-# Personal files
+# ========================================================================
+# Combined Python .gitignore (Standard + Modern Tools)
+# ========================================================================
+
+# Personal files & IDEs
 *.session
 *.session-journal
 .vscode
+.idea/
 *test*.py
 setup.cfg
+.spyderproject
+.spyproject
+.ropeproject
+.pypirc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.py[codz]
 *$py.class
 
 # C extensions
 *.so
+cython_debug/
 
 # Distribution / packaging
 .Python
@@ -34,8 +44,7 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+# Usually these files are written by a python script from a template
 *.manifest
 *.spec
 
@@ -53,7 +62,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
+*.py.cover
 .hypothesis/
 .pytest_cache/
 cover/
@@ -82,37 +91,39 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
+# Jupyter Notebook & IPython
 .ipynb_checkpoints
-
-# IPython
 profile_default/
 ipython_config.py
 
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
+# Dependency Management (Lock files - Uncomment if you want to ignore them)
 # .python-version
+# Pipfile.lock
+# uv.lock
+# poetry.lock
+# poetry.toml
+# pdm.lock
+# pdm.toml
+# pixi.lock
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+# PDM & PEP 582
+.pdm-python
+.pdm-build/
 __pypackages__/
+
+# Pixi
+.pixi
 
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
 
-# SageMath parsed files
+# SageMath
 *.sage.py
 
-# Environments
+# Environments (Virtual Envs)
 .env
+.envrc
 .venv
 env/
 venv/
@@ -120,27 +131,24 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
+# Static Analysis & Type Checkers
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
-# Pyre type checker
 .pyre/
-
-# pytype static type analyzer
 .pytype/
+.ruff_cache/
 
-# Cython debug symbols
-cython_debug/
-config.py
+# Documentation (mkdocs)
+/site
+
+# AI Tools & Modern Editors
+# Abstra
+.abstra/
+# Cursor
+.cursorignore
+.cursorindexingignore
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
