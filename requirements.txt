@@ -1,8 +1,9 @@
+pyrogram==2.0.106
 tgcrypto
 pymongo[srv]
 motor
 marshmallow
 umongo
-pyromod
+pyromod==1.5
 requests
 parse-torrent-name
