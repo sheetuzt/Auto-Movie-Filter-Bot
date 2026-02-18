@@ -1,7 +1,5 @@
 import logging
-import logging.config
-
-# Get logging configurations
+import logging.config  # Get logging configurations
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.ERROR)
 
@@ -11,11 +9,12 @@ from utils import Media
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN
 import pyromod.listen
 
+
 class Bot(Client):
 
     def __init__(self):
         super().__init__(
-            session_name=SESSION,
+            session=SESSION,
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
